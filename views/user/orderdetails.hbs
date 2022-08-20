@@ -1,0 +1,31 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">address</th>
+      <th scope="col">pincode</th>
+      <th scope="col">mobile</th>
+      <th scope="col">amount</th>
+      <th scope="col">paymentmethod</th>
+      <th scope="col">status</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    {{#each orderdetails}}
+      <tr>
+       <td>{{this.Date}}</td>
+      <td>{{this.adddress}}</td>
+      <td>{{this.pincode}}</td>
+      <td>{{this.mobile}}</td>
+      <td>{{this.total}}</td>
+      <td>{{this.paymentmethod}}</td>
+      <td>{{this.status}}</td>
+      <td>
+          <a href="/admin/orderproducts/{{this._id}}" class="btn btn-success">view products</a>
+      </td>
+     
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
